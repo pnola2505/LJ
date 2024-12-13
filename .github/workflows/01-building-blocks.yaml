@@ -2,7 +2,12 @@
 
 name: 01-building-blocks
 
-on: workflow_dispatch
+on: 
+ push:
+ pull_request:
+ schedule:
+     - cron: '*/5 * * * *'
+ workflow_dispatch:
 
 
 
