@@ -5,25 +5,16 @@ name: 01-building-blocks
 on: 
  push:
  
-
-
 jobs: 
-   myfirstjob:
-       runs-on: ubuntu-latest
-       steps:
+ build:
+        runs-on: ubuntu-latest
+        steps:
           - name: Checkout code
             uses: actions/checkout@v4
           - name: Printing folders
           - run: ls
           
-   secoundjob:
-         runs-on: ubuntu-latest
-         steps:
-           - name : Multi-line bash
-             run: |
-                  echo "I am"
-                  echo "a multi-line"
-                  echo "script."
+  
             
          
         
