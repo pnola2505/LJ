@@ -1,19 +1,30 @@
 # This is a basic workflow to help you get started with Actions
-
 name: 01-building-blocks
 
-on: push
- 
- 
+on: 
+ push:
+ pull_request:
+ schedule:
+     - cron: '*/5 * * * *'
+ workflow_dispatch:
+
+
+
 jobs: 
- build:
-        runs-on: ubuntu-latest
-        steps:
-          - name: Checkout code
-            uses: actions/checkout@v4
-          - name: Printing folders
-          - run: ls
+   myfirstjob:
+       runs-on: ubuntu-latest
+       steps: 
+          - run: echo "Hello World"
           
+   secoundjob:
+         runs-on: ubuntu-latest
+         steps:
+           - name : Multi-line bash
+             run: |
+                  echo "I am"
+                  echo "a multi-line"
+                  echo "script."
+            
   
             
          
