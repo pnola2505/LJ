@@ -4,17 +4,17 @@ name: 01-building-blocks
 
 on: 
  push:
- pull_request:
- 
  workflow_dispatch:
-
 
 
 jobs: 
    myfirstjob:
        runs-on: ubuntu-latest
-       steps: 
-          - run: echo "Hello World"
+       steps:
+          - name: Checkout code
+            uses: actions/checkout@v4
+          - name: Printing folders
+          - run: ls
           
    secoundjob:
          runs-on: ubuntu-latest
