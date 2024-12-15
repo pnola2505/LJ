@@ -2,8 +2,8 @@
 
 name: 01-building-blocks
 
-on: 
- push:
+on: push
+ 
  
 jobs: 
  build:
