@@ -9,10 +9,13 @@ on:
 
 
 jobs: 
-   myfirstjob:
+   build:
        runs-on: ubuntu-latest
        steps: 
-          - run: echo "Hello World"
+          - name: checkout code
+            uses: actions/checkout@v4
+          - name: pulling folders
+            run: ls
           
    secoundjob:
          runs-on: ubuntu-latest
